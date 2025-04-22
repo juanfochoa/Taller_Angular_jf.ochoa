@@ -1,7 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
-import { CourseComponent } from './course/course.component';
 import { HttpClientModule } from '@angular/common/http';
 
 describe('AppComponent', () => {
@@ -11,8 +10,8 @@ describe('AppComponent', () => {
         RouterTestingModule, HttpClientModule
       ],
       declarations: [
-        AppComponent, CourseComponent
-      ],
+        AppComponent
+      ], 
     }).compileComponents();
   });
 
@@ -22,10 +21,17 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'tutorialcourses'`, () => {
+  it(`should have as title 'AppSeries'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
     expect(app.title).toEqual('tutorialcourses');
   });
+
+  it(`should render title`, () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement as HTMLElement;
+    expect(compiled.querySelector('h1')?.textContent).toContain('AppSeries is running!');
+  }); 
 
 });

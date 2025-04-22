@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "tutorialcourses": {
+    "mynewapp": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -23,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/tutorialcourses",
+            "outputPath": "dist/mynewapp",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -79,10 +79,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "tutorialcourses:build:production"
+              "buildTarget": "mynewapp:build:production"
             },
             "development": {
-              "buildTarget": "tutorialcourses:build:development"
+              "buildTarget": "mynewapp:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -90,7 +90,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "tutorialcourses:build"
+            "buildTarget": "mynewapp:build"
           }
         },
         "test": {
@@ -115,6 +115,6 @@
     }
   },
   "cli": {
-    "analytics": "ac78076f-9fe0-4a5c-8bb3-38d993a54e75"
+    "analytics": "e0ef0604-2f1a-4378-aaac-e1027d3789ca"
   }
 }
