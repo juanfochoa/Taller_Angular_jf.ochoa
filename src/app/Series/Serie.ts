@@ -5,7 +5,8 @@ export class Serie {
     seasons: number;
     description: string;
     webpage: string;
-    image: string;
+    poster: string;
+
 
 
     constructor(id: number, name: string, channel: string, seasons: number, description: string, webpage: string, image: string) {
@@ -15,6 +16,6 @@ export class Serie {
         this.seasons = seasons;
         this.description = description;
         this.webpage = webpage;
-        this.image = image;
+        this.poster = image;
     }
 }

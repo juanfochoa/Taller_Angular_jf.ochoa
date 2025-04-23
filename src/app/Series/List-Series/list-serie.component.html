@@ -1,0 +1,40 @@
+<div class = "row justify-content">
+    <div class="col-7">
+        <table class = "table table-stripped">
+            <thread class="thread-light">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Canal</th>
+                    <th scope="col">Temporadas</th>
+                </tr>
+            </thread>
+            <tbody>
+                <tr *ngFor="let s of series">
+                    <td (click)="mostrarSerie(s)" style="cursor: pointer; color: rgb(0, 217, 214) ">
+                        {{s.name}}
+                    </td>
+                     <td>
+                        <dd>{{s.channel}}</dd>
+                     </td>
+                     <td>
+                        <dd>{{s.seasons}}</dd>
+                     </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="row">
+            <p class="col-4 small-text">Promedio de temporadas:  </p>
+            <p class="col-1 small-text">{{promedioTemporadas}}</p>
+        </div>
+    </div>
+    <div class="col-5" *ngIf="visibilidad">
+        <img src={{imagenSerie}} class = "card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{nombreSerie}}</h5>
+            <p class="card-text"> {{descripcionSerie}}</p>
+            <a class="btn btn-primary" href={{urlSerie}}>Ver ahora</a>
+            </div>
+        </div>
+    </div>    
+</div>
